@@ -361,7 +361,9 @@
     <include>
       <pose>-552 170 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/crocodile</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>10</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -399,7 +401,9 @@
     <include>
       <pose>-472 170 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/turtle</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>11</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -437,7 +441,9 @@
     <include>
       <pose>-512 170 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/platypus</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>9</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>

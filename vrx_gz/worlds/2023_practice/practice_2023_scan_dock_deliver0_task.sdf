@@ -361,7 +361,9 @@
       <name>robotx_light_buoy_rgy</name>
       <pose>-532 175 0.32 0 0 0</pose>
       <uri>robotx_light_buoy_rgy</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>6</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>

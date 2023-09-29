@@ -8,7 +8,9 @@
       <name>red_bound_0</name>
       <pose>0 18 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -27,7 +29,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -49,7 +51,9 @@
       <name>red_bound_1</name>
       <pose>-30 8 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -68,7 +72,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -90,7 +94,9 @@
       <name>red_bound_2</name>
       <pose>-60 0 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -109,7 +115,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -131,7 +137,9 @@
       <name>red_bound_3</name>
       <pose>-90 12 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -150,7 +158,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -172,7 +180,9 @@
       <name>red_bound_4</name>
       <pose>-140 0 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -191,7 +201,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -213,7 +223,9 @@
       <name>red_bound_5</name>
       <pose>-180 -10 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -232,7 +244,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -254,7 +266,9 @@
       <name>red_bound_6</name>
       <pose>-240 -52 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -273,7 +287,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -295,7 +309,9 @@
       <name>red_bound_7</name>
       <pose>-230 -90 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -314,7 +330,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -336,7 +352,9 @@
       <name>red_bound_8</name>
       <pose>-230 -130 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>20</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -355,7 +373,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -378,7 +396,9 @@
       <name>green_bound_0</name>
       <pose>0 0 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_white</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>2</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -397,7 +417,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -419,7 +439,9 @@
       <name>green_bound_1</name>
       <pose>-30 -12 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
-
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -438,7 +460,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -460,6 +482,9 @@
       <name>green_bound_2</name>
       <pose>-60 -16 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -478,7 +503,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -500,6 +525,9 @@
       <name>green_bound_3</name>
       <pose>-103 0 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -518,7 +546,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -540,6 +568,9 @@
       <name>green_bound_4</name>
       <pose>-140 -20 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -558,7 +589,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -580,6 +611,9 @@
       <name>green_bound_5</name>
       <pose>-170 -30 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -598,7 +632,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -620,6 +654,9 @@
       <name>green_bound_6</name>
       <pose>-220 -60 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -638,7 +675,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -660,6 +697,9 @@
       <name>green_bound_7</name>
       <pose>-210 -90 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>3</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -678,7 +718,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -700,6 +740,9 @@
       <name>green_bound_8</name>
       <pose>-210 -120 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>4</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -718,7 +761,7 @@
         </buoyancy>
         <wavefield>
           <size>1000 1000</size>
-          <cell_count>50 50></cell_count>
+          <cell_count>50 50</cell_count>
           <wave>
             <model>PMS</model>
             <period>5.0</period>
@@ -741,6 +784,9 @@
       <name>obstacle_0</name>
       <pose>-10 8 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -766,6 +812,9 @@
       <name>obstacle_1</name>
       <pose>-30 20 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -791,6 +840,9 @@
       <name>obstacle_2</name>
       <pose>-30 15 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -816,6 +868,9 @@
       <name>obstacle_3</name>
       <pose>-30 5 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -841,6 +896,9 @@
       <name>obstacle_4</name>
       <pose>-50 5 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -866,6 +924,9 @@
       <name>obstacle_5</name>
       <pose>-50 -10 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -891,6 +952,9 @@
       <name>obstacle_6</name>
       <pose>-70 -2 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -916,6 +980,9 @@
       <name>obstacle_7</name>
       <pose>-70 2 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -941,6 +1008,9 @@
       <name>obstacle_8</name>
       <pose>10 20 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -966,6 +1036,9 @@
       <name>obstacle_9</name>
       <pose>20 8 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -991,6 +1064,9 @@
       <name>obstacle_10</name>
       <pose>10 -5 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -1016,6 +1092,9 @@
       <name>obstacle_11</name>
       <pose>-115 10 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -1041,6 +1120,9 @@
       <name>obstacle_12</name>
       <pose>-150 -15 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -1066,6 +1148,9 @@
       <name>obstacle_13</name>
       <pose>-150 -30 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -1091,6 +1176,9 @@
       <name>obstacle_14</name>
       <pose>-200 -40 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -1116,6 +1204,9 @@
       <name>obstacle_15</name>
       <pose>-235 -75 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
@@ -1141,6 +1232,9 @@
       <name>obstacle_16</name>
       <pose>-230 -105 0.0 0 0 0 </pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_round_buoy_black</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>8</label>
+      </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
         <fluid_density>1000</fluid_density>
