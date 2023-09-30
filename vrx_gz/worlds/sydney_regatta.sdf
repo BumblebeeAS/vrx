@@ -357,11 +357,317 @@
       <name>platform</name>
       <uri>platform</uri>
     </include> -->
-
+<!-- 
     <include>
       <uri>dock_2022</uri>
       <pose>-480 190 0 0 0 1.0</pose>
+    </include> -->
+<!-- dock -->
+
+    <!-- The 2022 dock base -->
+    <include>
+      <pose>-480 190 0 0 0 0</pose>
+      <uri>dock_2022_base</uri>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>12</label>
+      </plugin>
     </include>
+
+
+    <!-- Placard #1 -->
+    <model name="dock_2022_placard1">
+      <pose>-475.75 193 1.5 0 0 1.5707963267948966</pose>
+      <include>
+        <static>true</static>
+        <pose>0 -0.2 0.25 0 0 3.14159</pose>
+        <uri>placard_2022</uri>
+      </include>
+      <link name="link_symbols">
+        <static>true</static>
+        <pose>0 0.07 0 0 0 0 </pose>
+        <visual name="visual_circle1">
+          <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>15</label>
+          </plugin>
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <transparency>1</transparency>
+          <plugin name="vrx::PlacardPlugin" filename="libPlacardPlugin.so">
+            <shape>circle</shape>
+            <color>red</color>
+            <visuals>
+              <visual>dock_2022_placard1::link_symbols::visual_circle1</visual>
+              <visual>dock_2022_placard1::link_symbols::visual_h_cross</visual>
+              <visual>dock_2022_placard1::link_symbols::visual_v_cross</visual>
+	            <visual>dock_2022_placard1::link_symbols::visual_triangle</visual>
+              <visual>dock_2022_placard1::link_symbols::visual_rectangle</visual>
+            </visuals>
+            <shuffle>false</shuffle>
+            <robot_namespace>vrx/dock_2022_placard1</robot_namespace>
+            <shuffle_topic>shuffle</shuffle_topic>
+          </plugin>
+        </visual>
+        <visual name="visual_h_cross">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>16</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.99 0.33 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+        </visual>
+        <visual name="visual_v_cross">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>16</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.33 0.99 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+	      </visual>
+        <visual name="visual_triangle">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>14</label>
+          </plugin> -->
+          <pose> -0.5 0 -0.5 1.571 0 0</pose>
+          <geometry>
+            <mesh><uri>model://symbol_triangle/mesh/triangle.dae</uri></mesh>
+          </geometry>
+          <transparency>1</transparency>
+	      </visual>
+        <visual name="visual_rectangle">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>13</label>
+          </plugin> -->
+          <pose> 0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.75 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+        </visual>
+
+      </link>
+      
+      <joint name="placard_to_visual" type="fixed">
+        <pose> 0 0 0 0 0 0 </pose>
+        <parent>placard::link</parent>    
+        <child>link_symbols</child>
+      </joint>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>7</label>
+      </plugin>
+    </model>
+
+
+    <!-- Placard #2 -->
+    <model name="dock_2022_placard2">
+      <pose>-475.75 199 1.5 0 0 1.5707963267948966</pose>
+      <include>
+        <static>true</static>
+        <pose>0 -0.2 0.25 0 0 3.14159</pose>
+        <uri>placard_2022</uri>
+      </include>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>7</label>
+      </plugin>
+      <link name="link_symbols">
+        <static>true</static>
+        <pose>0 0.07 0 0 0 0 </pose>
+        <visual name="visual_circle2">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>15</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <transparency>1</transparency>
+          <plugin name="vrx::PlacardPlugin" filename="libPlacardPlugin.so">
+            <visuals>
+              <visual>dock_2022_placard2::link_symbols::visual_circle2</visual>
+              <visual>dock_2022_placard2::link_symbols::visual_h_cross2</visual>
+              <visual>dock_2022_placard2::link_symbols::visual_v_cross2</visual>
+	            <visual>dock_2022_placard2::link_symbols::visual_triangle2</visual>
+              <visual>dock_2022_placard2::link_symbols::visual_rectangle2</visual>
+            </visuals>
+            <shape>rectangle</shape>
+            <color>yellow</color>
+            <shuffle>false</shuffle>
+            <robot_namespace>vrx/dock_2022_placard2</robot_namespace>
+            <shuffle_topic>shuffle</shuffle_topic>
+          </plugin>
+        </visual>
+        <visual name="visual_h_cross2">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>16</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.99 0.33 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+        </visual>
+        <visual name="visual_v_cross2">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>16</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.33 0.99 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+	      </visual>
+        <visual name="visual_triangle2">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>14</label>
+          </plugin> -->
+          <pose> -0.5 0 -0.5 1.571 0 0</pose>
+          <geometry>
+            <mesh><uri>model://symbol_triangle/mesh/triangle.dae</uri></mesh>
+          </geometry>
+          <transparency>1</transparency>
+	      </visual>
+        <visual name="visual_rectangle2">
+          <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>13</label>
+          </plugin>
+          <pose> 0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.75 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+        </visual>
+
+      </link>
+      
+      <joint name="placard_to_visual" type="fixed">
+        <pose> 0 0 0 0 0 0 </pose>
+        <parent>placard::link</parent>    
+        <child>link_symbols</child>
+      </joint>
+
+    </model>
+
+
+    <!-- Placard #3 -->
+    <model name="dock_2022_placard3">
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>7</label>
+      </plugin>
+      <pose>-475.75 205 1.5 0 0 1.5707963267948966</pose>
+      <include>
+        <static>true</static>
+        <pose>0 -0.2 0.25 0 0 3.14159</pose>
+        <uri>placard_2022</uri>
+      </include>
+      <link name="link_symbols">
+        <static>true</static>
+        <pose>0 0.07 0 0 0 0 </pose>
+        <visual name="visual_circle">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>15</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.5</radius>
+              <length>0.001</length>
+            </cylinder>
+          </geometry>
+          <transparency>1</transparency>
+          <plugin name="vrx::PlacardPlugin" filename="libPlacardPlugin.so">
+            <visuals>
+              <visual>dock_2022_placard3::link_symbols::visual_circle</visual>
+              <visual>dock_2022_placard3::link_symbols::visual_h_cross</visual>
+              <visual>dock_2022_placard3::link_symbols::visual_v_cross</visual>
+	            <visual>dock_2022_placard3::link_symbols::visual_triangle3</visual>
+              <visual>dock_2022_placard3::link_symbols::visual_rectangle</visual>
+            </visuals>
+            <shape>triangle</shape>
+            <color>green</color>
+            <shuffle>false</shuffle>
+            <robot_namespace>vrx/dock_2022_placard3</robot_namespace>
+            <shuffle_topic>shuffle</shuffle_topic>
+          </plugin>
+        </visual>
+        <visual name="visual_h_cross">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>16</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.99 0.33 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+        </visual>
+        <visual name="visual_v_cross">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>16</label>
+          </plugin> -->
+          <pose>0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.33 0.99 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+	      </visual>
+        <visual name="visual_triangle3">
+          <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>14</label>
+          </plugin>
+          <pose> -0.5 0 -0.5 1.571 0 0</pose>
+          <geometry>
+            <mesh><uri>model://symbol_triangle/mesh/triangle.dae</uri></mesh>
+          </geometry>
+          <transparency>1</transparency>
+	      </visual>
+        <visual name="visual_rectangle">
+          <!-- <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+            <label>13</label>
+          </plugin> -->
+          <pose> 0 0 0 1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.75 0.001</size>
+            </box>
+          </geometry>
+          <transparency>1</transparency>
+        </visual>
+
+      </link>
+      
+      <joint name="placard_to_visual" type="fixed">
+        <pose> 0 0 0 0 0 0 </pose>
+        <parent>placard::link</parent>    
+        <child>link_symbols</child>
+      </joint>
+    </model>
+
 
     <include>
       <name>robotx_light_buoy_rgb</name>

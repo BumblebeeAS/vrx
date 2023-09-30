@@ -9,7 +9,7 @@
       <pose>0 18 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -52,7 +52,7 @@
       <pose>-30 8 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -95,7 +95,7 @@
       <pose>-60 0 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -138,7 +138,7 @@
       <pose>-90 12 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -181,7 +181,7 @@
       <pose>-140 0 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -224,7 +224,7 @@
       <pose>-180 -10 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -267,7 +267,7 @@
       <pose>-240 -52 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -310,7 +310,7 @@
       <pose>-230 -90 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -353,7 +353,7 @@
       <pose>-230 -130 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>20</label>
+        <label>2</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">
@@ -397,7 +397,7 @@
       <pose>0 0 0.2 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_white</uri>
       <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>2</label>
+        <label>5</label>
       </plugin>
       <plugin name="vrx::PolyhedraBuoyancyDrag"
               filename="libPolyhedraBuoyancyDrag.so">

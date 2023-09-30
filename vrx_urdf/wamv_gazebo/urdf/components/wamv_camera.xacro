@@ -182,16 +182,15 @@
           </noise>
         </camera>
       </sensor>
-      <sensor type="segmentation" name="${name}_instance_segmentation">
-        <topic>panoptic</topic>
-        <segmentation_type>instance</segmentation_type>
-        <update_rate>15.0</update_rate>
+      <sensor type="segmentation" name="${name}_semantic_segmentation">
+        <topic>semantic</topic>
+        <update_rate>1.0</update_rate>
         <always_on>1</always_on>
         <xacro:if value="${visualize}">
           <visualize>true</visualize>
         </xacro:if>
         <camera name="${name}_segment_camera">
-          <segmentation_type>instance</segmentation_type>
+          <segmentation_type>semantic</segmentation_type>
           <horizontal_fov>1.3962634</horizontal_fov>
           <image>
             <width>1280</width>
@@ -208,10 +207,10 @@
                       That pixel's noise value is added to each of its color
                       channels, which at that point lie in the range [0,1]. -->
             <mean>0.0</mean>
-            <stddev>0.000</stddev>
+            <stddev>0.007</stddev>
           </noise>
           <save enabled="true">
-            <path>segmentation_data/${name}_instance_camera</path>
+            <path>segmentation_data/${name}_semantic_camera</path>
           </save>
         </camera>
       </sensor>

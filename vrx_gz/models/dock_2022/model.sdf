@@ -7,9 +7,6 @@
     <!-- The 2022 dock base -->
     <include>
       <uri>dock_2022_base</uri>
-      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-        <label>7</label>
-      </plugin>
     </include>
 
 
@@ -20,9 +17,6 @@
         <static>true</static>
         <pose>0 -0.2 0.25 0 0 3.14159</pose>
         <uri>placard_2022</uri>
-        <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-          <label>7</label>
-        </plugin>
       </include>
       <link name="link_symbols">
         <static>true</static>
@@ -102,9 +96,6 @@
         <static>true</static>
         <pose>0 -0.2 0.25 0 0 3.14159</pose>
         <uri>placard_2022</uri>
-        <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-          <label>7</label>
-        </plugin>
       </include>
       <link name="link_symbols">
         <static>true</static>
@@ -184,9 +175,6 @@
         <static>true</static>
         <pose>0 -0.2 0.25 0 0 3.14159</pose>
         <uri>placard_2022</uri>
-        <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
-          <label>7</label>
-        </plugin>
       </include>
       <link name="link_symbols">
         <static>true</static>
