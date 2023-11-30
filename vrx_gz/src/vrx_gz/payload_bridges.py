@@ -1,6 +1,6 @@
 from vrx_gz.bridge import Bridge, BridgeDirection
 
-import sdformat13 as sdf
+import sdformat14 as sdf
 
 
 def gz_prefix(world_name, model_name, link_name, sensor_name):
@@ -87,12 +87,12 @@ def rfranger(world_name, model_name, link_name, sensor_name):
         ros_type='ros_gz_interfaces/msg/ParamVec',
         direction=BridgeDirection.GZ_TO_ROS)
 
-def imu(world_name, model_name, link_name, sensor_name):
+def imu(world_name, model_name, link_name, sensor_name, is_ned):
     gz_sensor_prefix = gz_prefix(world_name, model_name, link_name, sensor_name)
     ros_sensor_prefix = ros_prefix('', 'imu')
     return Bridge(
         gz_topic=f'{gz_sensor_prefix}/imu',
-        ros_topic=f'{ros_sensor_prefix}imu/data',
+        ros_topic=f'{ros_sensor_prefix}imu/data{"_ned" if is_ned else ""}',
         gz_type='ignition.msgs.IMU',
         ros_type='sensor_msgs/msg/Imu',
         direction=BridgeDirection.GZ_TO_ROS)
@@ -181,7 +181,8 @@ def payload_bridges(world_name, model_name, link_name, sensor_name, sensor_type)
         ]
     elif sensor_type == sdf.Sensortype.IMU:
         bridges = [
-            imu(world_name, model_name, link_name, sensor_name)
+            imu(world_name, model_name, link_name, sensor_name,
+                "NED" in sensor_name)
         ]
     elif sensor_type == sdf.Sensortype.CONTACT:
         bridges = [

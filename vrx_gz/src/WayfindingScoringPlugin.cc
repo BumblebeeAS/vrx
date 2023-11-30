@@ -27,6 +27,9 @@
 #include <gz/sim/World.hh>
 #include <gz/plugin/Register.hh>
 #include <gz/transport/Node.hh>
+#include <gz/msgs/pose_v.pb.h>
+#include <gz/msgs/float_v.pb.h>
+#include <gz/msgs/float.pb.h>
 #include <sdf/sdf.hh>
 
 #include "WayfindingScoringPlugin.hh"

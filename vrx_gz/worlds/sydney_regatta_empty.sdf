@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <sdf version="1.9">
-  <world name="perception_task">
+  <world name="sydney_regatta_empty">
 
     <physics name="4ms" type="dart">
       <max_step_size>0.004</max_step_size>
@@ -352,11 +352,6 @@
       <uri>coast_waves</uri>
     </include>
 
-    <include>
-      <pose>-532 162 -1 0 0 0</pose>
-      <name>platform</name>
-      <uri>articulated_platform</uri>
-    </include>
 
     <!-- The posts for securing the WAM-V -->
     <include>
@@ -445,126 +440,6 @@
       <topic_wind_speed>/vrx/debug/wind/speed</topic_wind_speed>
       <topic_wind_direction>/vrx/debug/wind/direction</topic_wind_direction>
      </plugin>
-
-    <!-- Include all the objects we plan to use for perception.
-       Stash them out of the field of view for now -->
-    <include>
-      <name>red_0</name>
-      <pose>-200 100 1 0 0 0</pose>
-      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
-
-      <plugin name="vrx::PolyhedraBuoyancyDrag"
-              filename="libPolyhedraBuoyancyDrag.so">
-        <fluid_density>1000</fluid_density>
-        <fluid_level>0.0</fluid_level>
-        <linear_drag>25.0</linear_drag>
-        <angular_drag>2.0</angular_drag>
-        <buoyancy name="collision_outer">
-          <link_name>link</link_name>
-          <pose>0 0 -0.3 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.325</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-        </buoyancy>
-        <wavefield>
-          <topic>/vrx/wavefield/parameters</topic>
-        </wavefield>
-      </plugin>
-    </include>
-
-    <include>
-      <name>green_0</name>
-      <pose>-200 102 1 0 0 0</pose>
-      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_green</uri>
-
-      <plugin name="vrx::PolyhedraBuoyancyDrag"
-              filename="libPolyhedraBuoyancyDrag.so">
-        <fluid_density>1000</fluid_density>
-        <fluid_level>0.0</fluid_level>
-        <linear_drag>25.0</linear_drag>
-        <angular_drag>2.0</angular_drag>
-        <buoyancy name="collision_outer">
-          <link_name>link</link_name>
-          <pose>0 0 -0.3 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.325</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-        </buoyancy>
-        <wavefield>
-          <topic>/vrx/wavefield/parameters</topic>
-        </wavefield>
-      </plugin>
-    </include>
-
-    <include>
-      <name>black_0</name>
-      <pose>-200 104 1 0 0 0</pose>
-      <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_black</uri>
-
-      <plugin name="vrx::PolyhedraBuoyancyDrag"
-              filename="libPolyhedraBuoyancyDrag.so">
-        <fluid_density>1000</fluid_density>
-        <fluid_level>0.0</fluid_level>
-        <linear_drag>25.0</linear_drag>
-        <angular_drag>2.0</angular_drag>
-        <buoyancy name="collision_outer">
-          <link_name>link</link_name>
-          <pose>0 0 -0.3 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.325</radius>
-              <length>0.1</length>
-            </cylinder>
-          </geometry>
-        </buoyancy>
-        <wavefield>
-          <topic>/vrx/wavefield/parameters</topic>
-        </wavefield>
-      </plugin>
-    </include>
-
-    <!-- The perception scoring plugin -->
-    <plugin
-      filename="libPerceptionScoringPlugin.so"
-      name="vrx::PerceptionScoringPlugin">
-      <!-- Parameters for ScoringPlugin base class -->
-      <vehicle>wamv</vehicle>
-      <task_name>perception</task_name>
-      <initial_state_duration>10.0</initial_state_duration>
-      <ready_state_duration>10.0</ready_state_duration>
-      <running_state_duration>30</running_state_duration>
-      <!-- Parameters for PerceptionScoringPlugin -->
-      <frame>wamv</frame>
-      <!-- Pose of each object is expressed relative to the body frame
-           of the object named in the frame field - i.e., relative to
-           the wam-v-->
-      <object_sequence>
-        <object>
-          <time>5</time>
-          <type>mb_marker_buoy_red</type>
-          <name>red_0</name>
-          <pose>8 0 1 0 0 0</pose>
-        </object>
-        <object>
-          <time>5</time>
-          <type>mb_marker_buoy_green</type>
-          <name>green_0</name>
-          <pose>8 2 1 0 0 0</pose>
-        </object>
-        <object>
-          <time>15.0</time>
-          <type>mb_marker_buoy_black</type>
-          <name>black_0</name>
-          <pose>8 -2 1 0 0 0</pose>
-        </object>
-      </object_sequence>
-    </plugin>
 
     <!-- The wave field -->
     <plugin filename="libPublisherPlugin.so" name="vrx::PublisherPlugin">

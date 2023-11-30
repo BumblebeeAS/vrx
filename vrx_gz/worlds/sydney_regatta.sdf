@@ -293,8 +293,8 @@
       name="gz::sim::systems::ForceTorque">
     </plugin>
     <plugin
-      filename="gz-sim-particle-emitter2-system"
-      name="gz::sim::systems::ParticleEmitter2">
+      filename="gz-sim-particle-emitter-system"
+      name="gz::sim::systems::ParticleEmitter">
     </plugin>
     <plugin
       filename="gz-sim-scene-broadcaster-system"
@@ -352,7 +352,80 @@
       <uri>coast_waves</uri>
     </include>
 
+
+    <!-- The obstacle course -->
     <include>
+      <name>buoys</name>
+      <uri>model://obstacle_course</uri>
+      <pose>-477 275 0 0 0 2.54</pose>
+    </include>
+
+    <include>
+      <name>platform</name>
+      <uri>platform</uri>
+    </include>
+
+    <!-- The VRX short navigation course -->
+    <include>
+      <uri>model://short_navigation_course_0</uri>
+      <pose>-524 198 0 0 0 -1.44</pose>
+    </include>
+
+    <!-- Needed to detect the projectile in the placard detectors -->
+    <plugin name="gz::sim" filename="dummy">
+      <performer name="perf_blue_projectile">
+        <ref>blue_projectile</ref>
+        <geometry>
+          <box>
+            <size>0.057 0.057 0.057</size>
+          </box>
+        </geometry>
+      </performer>
+    </plugin>
+
+    <include>
+      <uri>dock_2022</uri>
+      <pose>-480 190 0 0 0 1.0</pose>
+    </include>
+
+    <include>
+      <name>robotx_light_buoy_rgb</name>
+      <pose>-528 186 0.32 0 0 0</pose>
+      <uri>robotx_light_buoy_rgb</uri>
+
+      <plugin name="vrx::PolyhedraBuoyancyDrag"
+              filename="libPolyhedraBuoyancyDrag.so">
+        <fluid_density>1000</fluid_density>
+        <fluid_level>0.0</fluid_level>
+        <linear_drag>1000.0</linear_drag>
+        <angular_drag>200.0</angular_drag>
+        <buoyancy name="buoyancy_base">
+          <link_name>base_link</link_name>
+          <pose>0 0 -0.1 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.5 1.5 0.4</size>
+            </box>
+          </geometry>
+        </buoyancy>
+        <buoyancy name="buoyancy_body">
+          <link_name>base_link</link_name>
+          <pose>0 0 0.8 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>0.15</length>
+            </cylinder>
+          </geometry>
+        </buoyancy>
+        <wavefield>
+          <topic>/vrx/wavefield/parameters</topic>
+        </wavefield>
+      </plugin>
+    </include>
+
+
+    <!-- <include>
       <name>mb_marker_buoy_red</name>
       <pose>-528 191 0 0 0 0</pose>
       <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/mb_marker_buoy_red</uri>
@@ -510,7 +583,7 @@
           <topic>/vrx/wavefield/parameters</topic>
         </wavefield>
       </plugin>
-    </include>
+    </include> -->
 
     <!-- The posts for securing the WAM-V -->
     <include>
