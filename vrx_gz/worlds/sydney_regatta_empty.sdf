@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 
-<sdf version="1.9">
+<sdf version="1.11">
   <world name="sydney_regatta_empty">
 
     <physics name="4ms" type="dart">

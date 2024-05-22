@@ -281,9 +281,9 @@ class Model:
             self.payload = self.payload_from_sdf(model_sdf)
 
         # for debugging generated sdf file
-        # with open('/tmp/wamv.sdf', 'w') as f:
-        #     f.write(model_sdf)
-        # print(command)
+        with open('/tmp/wamv.sdf', 'w') as f:
+            f.write(model_sdf)
+        print(command)
 
         return command, model_sdf
 
@@ -319,7 +319,7 @@ class Model:
         if not model_sdf:
             [command, model_sdf] = self.generate()
 
-        return ['-string', model_sdf,
+        return ['-file', '/tmp/wamv.sdf',
                 '-name', self.model_name,
                 '-allow_renaming', 'false',
                 '-x', str(self.position[0]),

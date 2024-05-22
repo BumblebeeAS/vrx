@@ -276,7 +276,7 @@ void BallShooterPlugin::PreUpdate(const sim::UpdateInfo &,
   // Teleport the projectile to the ball shooter.
   this->dataPtr->projectileModel.SetWorldPoseCmd(_ecm, projectilePose);
 
-  // Ignition!
+  // gz!
   const auto worldPose = this->dataPtr->projectileLink.WorldPose(_ecm);
   auto force = worldPose->Rot().RotateVector(
       math::Vector3d(this->dataPtr->shotForce, 0, 0));
