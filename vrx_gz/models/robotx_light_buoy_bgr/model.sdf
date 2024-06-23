@@ -43,10 +43,13 @@
           </box>
         </geometry>
         <material>
-          <script>
+          <!-- <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Black</name>
-          </script>
+          </script> -->
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
         <plugin name="vrx::LightBuoyPlugin" filename="libLightBuoyPlugin.so">
           <color_1>blue</color_1>
@@ -67,10 +70,13 @@
           </box>
         </geometry>
         <material>
-          <script>
+          <!-- <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Black</name>
-          </script>
+          </script> -->
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <visual name="panel_3">
@@ -81,10 +87,13 @@
           </box>
         </geometry>
         <material>
-          <script>
+          <!-- <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Black</name>
-          </script>
+          </script> -->
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <collision name="collision_base">
