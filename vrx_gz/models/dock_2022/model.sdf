@@ -421,7 +421,17 @@
         </material>
       </visual> -->
     <!-- </link> -->
-
+    <plugin
+      filename="gz-sim-odometry-publisher-system"
+      name="gz::sim::systems::OdometryPublisher">
+      <dimensions>3</dimensions>
+      <odom_publish_frequency>10\.0000</odom_publish_frequency>
+      <odom_frame>NBPARK_GZ</odom_frame>
+      <robot_base_frame>robotx_gt/dock</robot_base_frame>
+      <odom_topic>/robotx/dock/pose</odom_topic>
+      <gaussian_noise>0.0</gaussian_noise>
+      <name>dock/pose</name>
+    </plugin>
     <!-- Plugins to detect if vehicle is in the different dock regions -->
     <plugin
       filename="gz-sim-performer-detector-system"

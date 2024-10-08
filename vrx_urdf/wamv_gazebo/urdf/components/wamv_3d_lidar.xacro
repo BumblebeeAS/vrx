@@ -185,6 +185,7 @@
             <mean>0.0</mean>
             <stddev>${noise_stddev}</stddev>
           </noise>
+          <visibility_mask>4294967287</visibility_mask>
         </ray>
       </sensor>
     </gazebo>

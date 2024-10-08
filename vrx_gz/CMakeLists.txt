@@ -13,6 +13,7 @@ set(GZ_COMMON_VER ${gz-common5_VERSION_MAJOR})
 find_package(gz-fuel_tools9 REQUIRED)
 find_package(gz-math7 REQUIRED)
 set(GZ_MATH_VER ${gz-math7_VERSION_MAJOR})
+message(STATUS "gz-math7_VERSION_MAJOR: ${gz-math7_VERSION_MAJOR}")
 find_package(gz-msgs10 REQUIRED)
 find_package(gz-transport13 REQUIRED)
 set(GZ_TRANSPORT_VER ${gz-transport13_VERSION_MAJOR})
@@ -152,6 +153,7 @@ list(APPEND VRX_GZ_PLUGINS
   PlacardPlugin
   PublisherPlugin
   ScanDockScoringPlugin
+  SetModelPosePlugin
   SimpleHydrodynamics
   Surface
   USVWind

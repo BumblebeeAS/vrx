@@ -13,18 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 #ifndef VRX_BALL_SHOOTER_PLUGIN_HH_
 #define VRX_BALL_SHOOTER_PLUGIN_HH_
 
-#include <memory>
 #include <gz/sim/System.hh>
 #include <gz/utils/ImplPtr.hh>
+#include <memory>
 #include <sdf/sdf.hh>
 
-namespace vrx
-{
+namespace vrx {
 /// \brief Simulate a ball shooter. A projectile is launched when a
 /// ROS message is received. The ball is reused (teleported) from previous
 /// shots.
@@ -60,29 +59,31 @@ namespace vrx
 ///   <shot_force>250</shot_force>
 ///   <topic>my_robot/ball_shooter/fire</topic>
 /// </plugin>
-class BallShooterPlugin
-    : public gz::sim::System,
-      public gz::sim::ISystemConfigure,
-      public gz::sim::ISystemPreUpdate
-{
+class BallShooterPlugin : public gz::sim::System,
+                          public gz::sim::ISystemConfigure,
+                          public gz::sim::ISystemPreUpdate {
   // \brief Constructor.
-  public: BallShooterPlugin();
+public:
+  BallShooterPlugin();
 
   /// \brief Destructor.
-  public: ~BallShooterPlugin() override = default;
+public:
+  ~BallShooterPlugin() override = default;
 
   // Documentation inherited.
-  public: void Configure(const gz::sim::Entity &_entity,
-                         const std::shared_ptr<const sdf::Element> &_sdf,
-                         gz::sim::EntityComponentManager &_ecm,
-                         gz::sim::EventManager &_eventMgr) override;
+public:
+  void Configure(const gz::sim::Entity &_entity,
+                 const std::shared_ptr<const sdf::Element> &_sdf,
+                 gz::sim::EntityComponentManager &_ecm,
+                 gz::sim::EventManager &_eventMgr) override;
 
   // Documentation inherited.
-  public: void PreUpdate(const gz::sim::UpdateInfo &_info,
-                         gz::sim::EntityComponentManager &_ecm) override;
+public:
+  void PreUpdate(const gz::sim::UpdateInfo &_info,
+                 gz::sim::EntityComponentManager &_ecm) override;
 
   /// \brief Private data pointer.
   GZ_UTILS_UNIQUE_IMPL_PTR(dataPtr)
 };
-}
+} // namespace vrx
 #endif

@@ -37,10 +37,9 @@
             <!-- Linear resolution of the beam -->
             <resolution>0.02</resolution>
           </range>
+          <visibility_mask>4294967287</visibility_mask>
         </ray>
       </sensor>
     </gazebo>
   </xacro:macro>
 </robot>
-
-
