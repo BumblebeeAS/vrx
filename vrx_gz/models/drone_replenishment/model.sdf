@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="drone_replenishment">
+    <pose>0 0 -0.0762 0 0 0</pose>
+    <link name="base_link">
+      <inertial>
+        <pose>0 0 -0.2 0 0 0</pose>
+        <!-- 6.35 Kg. (dock block) x 9 (num blocks) + 10 Kg (estimated). -->
+        <mass>67.15</mass>
+        <inertia>
+          <ixx>13.486</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>13.486</iyy>
+          <iyz>0</iyz>
+          <izz>25.1813</izz>
+        </inertia>
+      </inertial>
+      <visual name="base">
+        <geometry>
+           <mesh>
+            <uri>file://drone_replenishment/mesh/replenish.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_base">
+        <pose>0 0 -0.2 0 0 0</pose>
+        <geometry>
+           <box>
+            <size>1.5 1.5 0.4</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <plugin
+      filename="gz-sim-odometry-publisher-system"
+      name="gz::sim::systems::OdometryPublisher">
+      <dimensions>3</dimensions>
+      <odom_publish_frequency>10.0000</odom_publish_frequency>
+      <odom_frame>NBPARK_GZ</odom_frame>
+      <robot_base_frame>robotx_gt/drone_replenishment</robot_base_frame>
+      <odom_topic>/robotx/drone_replenishment/pose</odom_topic>
+      <gaussian_noise>0.0</gaussian_noise>
+      <name>drone_replenishment/pose</name>
+    </plugin>
+  </model>
+</sdf>
